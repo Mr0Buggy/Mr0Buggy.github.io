@@ -1,52 +1,27 @@
 <html>
   <head>
-    <!--Load the AJAX API-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
-<script type="text/javascript">
-  google.charts.load("current", {packages:["timeline"]});
-  google.charts.setOnLoadCallback(drawChart);
-  function drawChart() {
-    var container = document.getElementById('MBT');
-    var chart = new google.visualization.Timeline(container);
-    var dataTable = new google.visualization.DataTable();
-
-    dataTable.addColumn({ type: 'string', id: 'Tank_Family' });
-    dataTable.addColumn({ type: 'string', id: 'Stage' });
-    dataTable.addColumn({ type: 'date', id: 'Start' });
-    dataTable.addColumn({ type: 'date', id: 'End' });
-    dataTable.addRows([
-      [ 'Leopard 1', 'Development', new Date(1956, 0, 0), new Date(1964, 11, 30) ],
-      [ 'Leopard 1', 'Production', new Date(1965, 0, 0), new Date(1966, 11, 30) ],
-      [ 'Leopard 1', 'Use', new Date(1967, 0, 0), new Date(1977, 11, 30) ],
-      [ 'Leopard 1A1A1', 'Upgrade', new Date(1975, 0, 0), new Date(1977, 11, 30) ],
-      [ 'Leopard 1A1A1', 'Use', new Date(1978, 0, 0), new Date(1992, 11, 30) ],
-      [ 'Leopard 1A2', 'Development', new Date(1969, 0, 0), new Date(1971, 11, 30) ],
-      [ 'Leopard 1A2', 'Production', new Date(1972, 0, 0), new Date(1973, 11, 30) ],
-      [ 'Leopard 1A2', 'Use', new Date(1974, 0, 0), new Date(1993, 11, 30) ],
-      [ 'Leopard 1A3', 'Development', new Date(1970, 0, 0), new Date(1972, 11, 30) ],
-      [ 'Leopard 1A3', 'Production', new Date(1973, 0, 0), new Date(1974, 11, 30) ],
-      [ 'Leopard 1A3', 'Use', new Date(1975, 0, 0), new Date(1991, 11, 30) ],
-      [ 'Leopard 1A4', 'Development', new Date(1971, 0, 0), new Date(1973, 11, 30) ],
-      [ 'Leopard 1A4', 'Production', new Date(1974, 0, 0), new Date(1976, 11, 30) ],
-      [ 'Leopard 1A4', 'Use', new Date(1977, 0, 0), new Date(1989, 11, 30) ],
-      [ 'Leopard 1A5', 'Development', new Date(1980, 0, 0), new Date(1985, 11, 30) ],
-      [ 'Leopard 1A5', 'Upgrade', new Date(1986, 0, 0), new Date(1992, 11, 30) ],
-      [ 'Leopard 1A5', 'Use', new Date(1993, 0, 0), new Date(2003, 11, 30) ],
-	  [ 'Leopard 1A6', 'Development', new Date(1980, 0, 0), new Date(1985, 11, 30) ],
-	  ]);
-
-    var options = {
-      
-    };
-
-    chart.draw(dataTable, options);
-  }
-</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
   </head>
 
   <body>
-    <!--Div that will hold the pie chart-->
-    <div id="MBT" style="height:100%"></div>
+	<ul>
+		<li><a class="active" href="index.html">Home</a></li>
+		<li><a href="tanks.html">Light\Medium\Heavy Tanks\MBT</a></li>
+		<li><a href="ifv.html">APC/IFV</a></li>
+		<li><a href="top_shell.html">Gun Ammo</a></li>
+		<li><a href="atgm.html">ATGM</a></li>
+		<li><a href="helo.html">Helicopters</a></li>
+		<li><a href="plane.html">Planes</a></li>
+	</ul>
+	<br>
+    <h1 style="font-size:200%;">The Great Equipment Timeline Project</h1>
+	<p>Aim of this project is to present development of military equipment, during and beyond the Cold War.</p>
+	<br>
+	<h2 style="font-size:150%;">Changelog</h2>
+	<h2 style="font-size:110%;">08-01-2017</h2>
+	<p>Added new German and Soviet/Ukrainian entries. Added navigation, home page and placeholder pages for other categories.</p>
+	
+	<h2 style="font-size:110%;">07-01-2017</h2>
+	<p>Start of the project. Gotten functioning timeline style chart. Added Leopard 1 family.</p>
   </body>
 </html>
